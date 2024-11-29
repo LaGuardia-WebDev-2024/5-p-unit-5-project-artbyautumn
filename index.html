@@ -7,7 +7,7 @@ Requirements
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
+[ yes ] Feature 2 - Flip Card
 [ no ] Feature 3 - Navbar
 [ no ] Feature 4 - Shaking Animation
 [ no ] Feature 5 - Gradient Background
@@ -16,17 +16,318 @@ Select ONE Additional Feature to Add
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Unit 5 Project</title>
+    <meta charset="utf-8" />
+    <style>
+      @font-face {
+        font-family: christmas;
+        src: url(https://cdn.glitch.global/ec2d966d-1c2d-4e6e-af89-1e090669cb90/CHRISTMAS%20COMEBACK.otf?v=1732834913344)
+      }
+      
+      body {
+        background-color: rgb(237, 223, 224);
+      }
+      h1 {
+        color: rgb(183, 183, 183);
+        font-family: christmas;
+        font-size: 3em;
+      }
+      
+      h2 {
+        font-family: christmas;
+        text-align: center;
+      }
+      
+      .photos {
+        height: 300px;
+        margin: 10px;
+      }
+      
+      #art {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: auto;
+        marhin-bottom: auto;
+      }
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
+      #content {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        vertical-align:        
+      }
+      
+      #info-photo {
+        background-color: pink;
+        border: 5px solid purple;
+        border-radius: 15px 15px;
+        padding: 20px;
+        height: 270px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      
+      .jon {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: auto;
+      }
+      
+      #about-her{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 25px;
+      }
+      
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+      }
+      
+      #hate {
+        color: red;
+        font-style: italic;
+      }
 
-  </style>
-</head>
-<body>
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
 
- 
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
 
-</body>
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      .flip-card-back {
+        background-color: purple;
+        color: white;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+    <div>
+    <h1>All about Olivia🙀</h1>
+    <h2>
+      Basic Info:
+      <ul>
+        <li>She's a senior art major at LaGuardia (same)</li>
+        <li>She's from Brazil! 🤩</li>
+        <li>She lives on Roosevelt Island</li>
+        <li>She's super cool and smart and pretty (I was not forced to add this)</li>
+        <li>She's extermely good at coding (the master behind the Monster High website)</li>
+        <li>She has a dog (she claims I kicked and <strong>I DIDNT</strong>)</li>
+      </ul>
+    </h2>
+</div>
+      
+      <div id="info-photo">
+      
+        <div>
+          <img
+               src = "https://mail.google.com/mail/u/0?ui=2&ik=e249ec8d4a&attid=0.1&permmsgid=msg-f:1817009342425884286&th=1937505eb8dc667e&view=fimg&fur=ip&permmsgid=msg-f:1817009342425884286&sz=s0-l75-ft&attbid=ANGjdJ9wKgU3qU_rMPJ45Cscp6lGDVTxHaXYehHK5zjihtYRZoHDX3AAbB0BodGODCiC_ws5__cFTJoIamIxMiohNjZpwIzb7MdDRJs6mWuUZ-p4ivy4B56u1ctOC6M&disp=emb&realattid=60F6F655-988B-4407-A3A3-5199B32F83F3&zw"
+                      width = "200" >
+       <div>
+         the beautiful olivia with the painting i made of her 🥰
+          </div>
+        </div>
+      </div>
+      
+      
+    </div> 
+     
+    <h2>
+      Her wonderful better than Picasso <span id="hate">(we both hate him)</span> art of me😻:
+    </h2>
+        
+    <div id="art">
+     
+      <div>
+         <img
+               class= "photos"
+               src= "https://mail.google.com/mail/u/0?ui=2&ik=e249ec8d4a&attid=0.1&permmsgid=msg-f:1817010226377955957&th=1937512c88829a75&view=fimg&fur=ip&permmsgid=msg-f:1817010226377955957&sz=s0-l75-ft&attbid=ANGjdJ-unK3aSLCBca9hfLIocr6Yufiqzv4q0zBJIBAVpGu8hOZ6TWJc2OSJYiImeq_115wLiO81NP0vhyKcFIGKnE4A96T0w6UH-WH51L5BkNucZGRqqFFSAQvaIE8&disp=emb&realattid=D44F6962-7676-4FF6-8761-47AE4B71EE86&zw"
+               >
+              throwback to my 16th birthday gift
+        
+      </div>
+       
+        <div>
+           <img 
+                 class= "photos"
+                 src= "https://mail.google.com/mail/u/0?ui=2&ik=e249ec8d4a&attid=0.1&permmsgid=msg-f:1817009516024233475&th=193750872420fe03&view=fimg&fur=ip&permmsgid=msg-f:1817009516024233475&sz=s0-l75-ft&attbid=ANGjdJ8Ai5Ier7kIZRYBz2MCc7UybE0O3VZIsOjhipms0ua2hdGZte_Y9IcvZLgyWPs1w4vH6ydzTcgZZ7-P94AyR5pxk36vWv042ts2ZU4yLuRh4OQT9kj2jqor6e4&disp=emb&realattid=D2A91ED7-1111-462E-8FD1-0F13F87AA59C&zw"
+        >
+                 valentines day card junior year
+        </div>
+           
+    </div>        
+  
+    
+    
+    <h2>
+      Cool fun facts <em>(you may have not known):</em>
+    </h2>
+    
+    <div id="about-her">
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://cdn11.bigcommerce.com/s-qbjojecpaq/images/stencil/1280x1280/products/442/1968/Untitled_design_-_2023-06-12T155310.493__67118.1686599665.png?c=1"
+            style="width: 300px; height: 300px"
+          />
+        </div>
+        <div class="flip-card-back">
+          <h1>Her favorite food</h1>
+          <p>Chocolate😻</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://i.pinimg.com/236x/73/b5/c9/73b5c9eab86ef5a402949ba6fd6ae6eb.jpg"
+            style="width: 300px; height: 300px"
+          />
+        </div>
+        <div class="flip-card-back">
+          <h1>Her secret celebrity crush (I dont know who he is)</h1>
+          <p>Orochinho</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+          src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn3.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSu1KjAyHvPR6U9qTaIN-XFOLRG5ke6KBWiIYEBsbKCY9KSUOj8&psig=AOvVaw0xJHkcPFr-XBdl-kAPw1UO&ust=1732307518332000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJD8gsWi7okDFQAAAAAdAAAAABAE"
+          style="width: 300px; height: 300px" />
+        </div>
+        <div class="flip-card-back">
+          <h1>Her favorite movie</h1>
+          <p>Hotel Translyvania😹</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/b/be/Rita_Lee%3B_Self-titled_1979_album_cover.jpg"
+            style="width: 300px; height: 300px"
+          />
+        </div>
+        <div class="flip-card-back">
+          <h1>One of her favorite artists (she has too many)</h1>
+          <p>Rita Lee</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__KM70NrTpoRvAVrjl9AqIAeYqmC0QEDkUg&s"
+            style="width: 300px; height: 300px"
+          />
+        </div>
+        <div class="flip-card-back">
+          <h1>Her favorite show</h1>
+          <p>South Park</p>
+        </div>
+      </div>
+    </div>
+       </div>
+    
+    <h2>
+      Photo Gallery
+    </h2>
+    
+    <div id="photo-gallery">
+      <div class="jon">
+       <img
+            class= "photos"
+            src="https://mail.google.com/mail/u/0?ui=2&ik=e249ec8d4a&attid=0.1&permmsgid=msg-f:1817009289926845029&th=193750527faca265&view=fimg&fur=ip&permmsgid=msg-f:1817009289926845029&sz=s0-l75-ft&attbid=ANGjdJ8tOhgk4v9cfs1ORR_GN5GKd3vcRORmjLpjM4Y17zoYpTa95QyMyOH_3OUbsNsLZVOdvzo0gEMLS-yGjwDFrVKXlROlxVsmDF14w763kYOK9Ezd3eYrqAYYRZc&disp=emb&realattid=AC7872BF-678E-4E04-BC58-EE8C0F1A9AE5&zw" 
+            >
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        super cool polariod i took of her at the subway
+      </div>
+      <div class= "jon">
+       <img
+            class= "photos"
+            src= "https://mail.google.com/mail/u/0?ui=2&ik=e249ec8d4a&attid=0.1&permmsgid=msg-f:1817009396741866009&th=1937506b5e588219&view=fimg&fur=ip&permmsgid=msg-f:1817009396741866009&sz=s0-l75-ft&attbid=ANGjdJ9fD08M2oIWCfgq3Ac_d5hW3dHKu7mQK7AwUmVwBRXZdIskoRmj9pvR9Q8d6su7793jLzBYux6ppfqsA7qgq9HV2ZHj2dlN5SSoBKRQck0kBfOJ-CyGdrBhRn8&disp=emb&realattid=1A0BFF3B-C95D-429D-8C7C-34E3409917E8&zw"
+            >
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        flynn and rapunzel (the best halloween costume)
+      </div>
+      <div class="jon">
+       <img
+            class= "photos"
+            src= "https://mail.google.com/mail/u/0?ui=2&ik=e249ec8d4a&attid=0.2&permmsgid=msg-f:1817009289926845029&th=193750527faca265&view=fimg&fur=ip&permmsgid=msg-f:1817009289926845029&sz=s0-l75-ft&attbid=ANGjdJ8Km2Hy466mzqp836wLSB9jREvDyTcGh_YUgYFLm0ureyavS7rAnOC7kD-zvDAvzuJby_oLXepenst8AySjYH02LQzf13KySL_dX9oUp04iJepzN9JvALTX6TA&disp=emb&realattid=CBFE5118-8704-4C64-909A-E646960CD465&zw"
+            >
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        thanksgiving 
+      </div>
+      <div class="jon">
+       <img
+            class= "photos"
+            src= "https://mail.google.com/mail/u/0?ui=2&ik=e249ec8d4a&attid=0.1&permmsgid=msg-f:1817010312810028746&th=19375140a8435eca&view=fimg&fur=ip&permmsgid=msg-f:1817010312810028746&sz=s0-l75-ft&attbid=ANGjdJ9zv__RH50SPXS_ZZCWETgbT8PVtIJlFznVspJWkNjdv7-SiYQlhjXdlx10Ka6FklNB-q3R7PD2ISc8Z0Na-HflZoFCUJyAYW5lmftw-xeqPDR-re5wG8_Dq4E&disp=emb&realattid=41B5E4FB-0B91-47C6-927B-2DF4AA7C7BAF&zw"
+            >
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        coney island with gay george and ugly shelly (our valuable children)
+      </div>
+    </div>
+    
+  </body>
 </html>
